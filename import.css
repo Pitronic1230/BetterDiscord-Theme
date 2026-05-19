@@ -2,29 +2,23 @@
  * @name Pitroniy
  * @author Pitronic
  * @description Mega ultra theme by Pitronic
- * @version 0.1.1
+ * @version 0.1.2
  */
 
 :root {
-
-    /* НАСТРОЙКИ */
-
-    --background-color: #6c2147;
+    --background-color: #aac;
     --opacity: 50%;
-    /*rgb(Красный, зелённый, синий)*/
     --profile-color: rgb(30, 30, 30);
     --profile-border-speed: 3s;
-
-    /* --------- */
     
-
-
-    --profile-border-color2: color-mix(in srgb, var(--background-color), black 25%);
-    --profile-border-color1: color-mix(in srgb, var(--background-color), white 25%);
+    --pitroniy-color-black: color-mix(in srgb, var(--background-color), black 30%);
+    --pitroniy-color-white: color-mix(in srgb, var(--background-color), white 30%);
 
     --custom-theme-base-color: var(--background-color);
     --custom-theme-base-color-amount: var(--opacity);
     
+    --profile-border-color1: color-mix(in srgb, var(--background-color), white 25%);
+    --profile-border-color2: color-mix(in srgb, var(--background-color), black 25%);
     --profile-primary-color: color-mix(in srgb, var(--background-color), var(--profile-border-color1) 75%);
     --profile-secondary-color: color-mix(in srgb, var(--background-color), var(--profile-border-color2) 25%);
     --profile-tertiary-color: color-mix(in srgb, var(--background-color), var(--profile-color) 75%);
@@ -34,6 +28,12 @@
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
+}
+.bar_c38106 {
+    background: linear-gradient(
+        var(--pitroniy-color-white),
+        var(--pitroniy-color-black)
+    );
 }
 .panels__5e434, .panel__5dec7 { border: none; }
 .panels__5e434, .panels__5e434::after {
