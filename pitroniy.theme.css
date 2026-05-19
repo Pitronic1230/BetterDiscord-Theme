@@ -1,7 +1,12 @@
 /**
- * @name Pitroniy
+ * @name Pitroniy-Test-Import
  * @author Pitronic
  * @description Mega ultra theme by Pitronic
- * @version 0.1.1
+ * @version 0.1.2
  */
-@import url("https://pitronic1230.github.io/BetterDiscord-Theme/import.css")
+@import url("https://pitronic1230.github.io/BetterDiscord-Theme/import.css");
+
+:root {
+    --background-color: #aaaaccff;
+    --profile-color: #303030ff;
+}
