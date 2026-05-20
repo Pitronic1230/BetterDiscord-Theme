@@ -1,27 +1,40 @@
 /**
- * @name Pitroniy-test2
+ * @name Pitroniy
  * @author Pitronic
  * @description Mega ultra theme by Pitronic
- * @version 0.1.3
+ * @version 0.2.0
  */
 
+
+
 :root {
-    --background-color: #aaaaccff;
-    --opacity: 50%;
-    --profile-color: #303030ff;
-    --profile-border-speed: 3s;
+    --background-color: #aaaacc75;
+    --background-base-lowest: none;
+    --background-base-lower: none;
+    --background-base-low: none;
+    --opacity: 100%;
+    --profile-color: #444455;
+    --profile-border-speed: 2s;
     
-    --pitroniy-color-black: color-mix(in srgb, var(--background-color), black 30%);
-    --pitroniy-color-white: color-mix(in srgb, var(--background-color), white 30%);
+    --pitroniy-color-black: color-mix(in srgb, var(--background-color), black 50%);
+    --pitroniy-color-white: color-mix(in srgb, var(--background-color), white 50%);
 
     --custom-theme-base-color: var(--background-color);
     --custom-theme-base-color-amount: var(--opacity);
     
-    --profile-border-color1: color-mix(in srgb, var(--background-color), var(--pitroniy-color-white));
-    --profile-border-color2: color-mix(in srgb, var(--background-color), var(--pitroniy-color-black));
+    --profile-border-color1: color-mix(in srgb, var(--profile-color) 75%, var(--pitroniy-color-white));
+    --profile-border-color2: color-mix(in srgb, var(--profile-color) 75%, var(--pitroniy-color-black));
     --profile-primary-color: color-mix(in srgb, var(--background-color), var(--profile-border-color1) 75%);
     --profile-secondary-color: color-mix(in srgb, var(--background-color), var(--profile-border-color2) 25%);
-    --profile-tertiary-color: color-mix(in srgb, var(--background-color), var(--profile-color) 75%);
+    --profile-tertiary-color: color-mix(in  rgb, var(--background-color), var(--profile-color) 75%);
+}
+
+[class*="appMount"] {
+    --image: url("https://pitronic1230.github.io/BetterDiscord-Theme/hamtaro-bg.jpg");
+    background-color: var(--background-color);
+    background-image: var(--image);
+    background-blend-mode: overlay;
+    background-size: cover;
 }
 
 @property --pitroniy-rotate {
@@ -29,13 +42,15 @@
     initial-value: 0deg;
     inherits: false;
 }
+
 .bar_c38106 {
-    background: linear-gradient(
-        var(--pitroniy-color-white),
-        var(--pitroniy-color-black)
-    );
+    background: var(--pitroniy-color-black);
 }
-.panels__5e434, .panel__5dec7 { border: none; }
+
+.panels__5e434, .panel__5dec7 { 
+    border: none; 
+}
+
 .panels__5e434, .panels__5e434::after {
     background-image: conic-gradient(from var(--pitroniy-rotate),
         var(--profile-border-color1),
@@ -44,8 +59,9 @@
         var(--profile-border-color2),
         var(--profile-border-color1)
     );
-    animation: 3s rotate linear infinite;
+    animation: var(--profile-border-speed) rotate linear infinite;
 }
+
 .panels__5e434::after {
     content: '';
     position: absolute;
@@ -57,6 +73,7 @@
     filter: blur(1.5rem);
     z-index: -1;
 }
+
 .panels__5e434::before {
     content: '';
     position: absolute;
@@ -67,8 +84,9 @@
     translate: -50% -50%;
     border-radius: inherit;
     margin: auto;
-    background: var(--profile-tertiary-color);
+    background: var(--profile-color);
 }
+
 .panel__5dec7 {
     background: color-mix(in hsl, transparent, var(--profile-secondary-color));
     visibility: hidden;
